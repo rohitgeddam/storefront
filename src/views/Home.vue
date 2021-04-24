@@ -1,8 +1,10 @@
 <template>
   <div class="container">
     <h1>New Arrivals</h1>
-    <ItemCard v-for="item in items" :key="item.id" :item="item"/>
-
+       <div class="gallary">
+         <ItemCard v-for="item in items" :key="item.id" :item="item" :id="item.id"/>
+       </div>
+     
   </div>
 </template>
 
@@ -42,5 +44,21 @@ export default {
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
+    padding: 20px;
+  }
+
+ 
+
+  .gallary{
+    display: flex;
+    flex-direction: column;
+  }
+
+    @media only screen and (min-width: 600px){
+    .gallary {
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 </style>
