@@ -7,10 +7,12 @@
             </div>
 
             <div class="details">
-              <p><b>Title - </b>{{item.title}}</p>
-              <p><b>Description - </b>{{item.description}}</p>
+              <p><b>{{item.title}}</b></p>
+              <p><b></b>{{item.description}}</p>
               <p><b>Color - </b>{{item.color}}</p>
               <p><b>Price - </b>{{item.price}}</p>
+              <h4 class="item-card__pill">{{ item.category }}</h4>
+
               <p v-if="item.available" class="details__available">Available</p>
               <p v-else class="details__notavailable">Not Available</p>
             </div>
@@ -120,6 +122,14 @@ export default {
   width: 300px;
   height: 300px;
 }
+
+
+  .item-card__pill{
+    background: gray;
+    color: white;
+    width: 50%;
+    border-radius: 20px;
+  }
 
 
 </style>

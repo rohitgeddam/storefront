@@ -7,8 +7,8 @@
       </div>
 
       <div class="item-card__body">
-        <h4>{{ item.title }}</h4>
-        <h5>{{ item.category }}</h5>
+        <h3>{{ item.title }}</h3>
+        <h4 class="item-card__pill">{{ item.category }}</h4>
       </div>
     </div>
     </div>
@@ -58,5 +58,18 @@ export default {
   .item-link{
     color: gray;
     text-decoration: none;
+  }
+
+  .item-card__body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item-card__pill{
+    background: gray;
+    color: white;
+    width: 50%;
+    border-radius: 20px;
   }
 </style>
